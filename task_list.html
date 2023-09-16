@@ -1,0 +1,16 @@
+<!-- Task List -->
+
+<h1>Task List</h1>
+
+<ul>
+    {% for task in tasks %}
+    <li>
+        <h3>{{ task.name }}</h3>
+        <p>{{ task.description }}</p>
+        <p>Status: {{ task.status }}</p>
+        <a href="/edit_task/{{ task.id }}">Edit</a>
+        <a href="/mark_completed/{{ task.id }}">Mark as Completed</a>
+        <a href="/delete_task/{{ task.id }}">Delete</a>
+    </li>
+    {% endfor %}
+</ul>
